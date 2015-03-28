@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/steve/pcbs/FullChargeAhead/FullChargeAhead.sch)
-    (date "Thu 26 Mar 2015 19:04:25 CET")
+    (date "Fri 27 Mar 2015 21:42:39 CET")
     (tool "Eeschema 0.201503261001+5536~22~ubuntu14.04.1-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -85,7 +85,10 @@
       (tstamp 550DAAE4))
     (comp (ref P102)
       (value CONN_01X02)
-      (footprint Pin_Headers:Pin_Header_Straight_1x02)
+      (footprint fca-lib:JST_2Pin)
+      (fields
+        (field (name MPN) S2B-PH-K-S)
+        (field (name ConradPN) 740197-62))
       (libsource (lib conn) (part CONN_01X02))
       (sheetpath (names /) (tstamps /))
       (tstamp 550DC35E))
@@ -138,6 +141,17 @@
       (pins
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name P2) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistor)
+      (footprints
+        (fp R_*)
+        (fp Resistor_*))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib conn) (part USB-MINI-B)
       (aliases
         (alias USB-MICRO-B))
@@ -157,46 +171,6 @@
         (pin (num 7) (name SHELL2) (type passive))
         (pin (num 8) (name SHELL3) (type passive))
         (pin (num 9) (name SHELL4) (type passive))))
-    (libpart (lib FullChargeAheadComponents) (part MCP73834-FCI/UN)
-      (fields
-        (field (name Reference) U)
-        (field (name Value) MCP73834-FCI/UN))
-      (pins
-        (pin (num 1) (name Vdd) (type power_in))
-        (pin (num 2) (name Vdd) (type power_in))
-        (pin (num 3) (name Stat1) (type input))
-        (pin (num 4) (name Stat2) (type input))
-        (pin (num 5) (name Vss) (type power_in))
-        (pin (num 6) (name Program) (type power_in))
-        (pin (num 7) (name ~TE) (type input))
-        (pin (num 8) (name Therm) (type input))
-        (pin (num 9) (name Vbatt) (type power_out))
-        (pin (num 10) (name Vbatt) (type power_out))))
-    (libpart (lib device) (part C)
-      (description "Unpolarized capacitor")
-      (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistor)
-      (footprints
-        (fp R_*)
-        (fp Resistor_*))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part LED)
       (footprints
         (fp LED-3MM)
@@ -211,14 +185,43 @@
         (field (name Value) LED))
       (pins
         (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive)))))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part C)
+      (description "Unpolarized capacitor")
+      (footprints
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib FullChargeAheadComponents) (part MCP73834-FCI/UN)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) MCP73834-FCI/UN))
+      (pins
+        (pin (num 1) (name Vdd) (type power_in))
+        (pin (num 2) (name Vdd) (type power_in))
+        (pin (num 3) (name Stat1) (type input))
+        (pin (num 4) (name Stat2) (type input))
+        (pin (num 5) (name Vss) (type power_in))
+        (pin (num 6) (name Program) (type power_in))
+        (pin (num 7) (name ~TE) (type input))
+        (pin (num 8) (name Therm) (type input))
+        (pin (num 9) (name Vbatt) (type power_out))
+        (pin (num 10) (name Vbatt) (type power_out)))))
   (libraries
-    (library (logical FullChargeAheadComponents)
-      (uri /home/steve/pcbs/FullChargeAhead/lib/FullChargeAheadComponents.lib))
+    (library (logical conn)
+      (uri /usr/local/share/kicad/library/conn.lib))
     (library (logical device)
       (uri /usr/local/share/kicad/library/device.lib))
-    (library (logical conn)
-      (uri /usr/local/share/kicad/library/conn.lib)))
+    (library (logical FullChargeAheadComponents)
+      (uri /home/steve/pcbs/FullChargeAhead/lib/FullChargeAheadComponents.lib)))
   (nets
     (net (code 1) (name "Net-(CON101-Pad3)")
       (node (ref R108) (pin 1))
