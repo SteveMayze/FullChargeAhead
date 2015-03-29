@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb 0.201503261001+5536~22~ubuntu14.04.1-product   date = Fri 27 Mar 2015 21:39:41 CET
+Cmp-Mod V01 Created by Cvpcb 0.201503261001+5536~22~ubuntu14.04.1-product   date = Sat 28 Mar 2015 14:12:26 CET
 
 BeginCmp
 TimeStamp = /550DAA43;
@@ -12,13 +12,6 @@ TimeStamp = /550DAAE4;
 Reference = C102;
 ValeurCmp = 4.7uF;
 IdModule  = Capacitors_SMD:C_1206_HandSoldering;
-EndCmp
-
-BeginCmp
-TimeStamp = /550DCE37;
-Reference = CON101;
-ValeurCmp = USB-MICRO-B;
-IdModule  = fca-lib:USB_Micro_B;
 EndCmp
 
 BeginCmp
@@ -52,7 +45,7 @@ EndCmp
 BeginCmp
 TimeStamp = /550DC35E;
 Reference = P102;
-ValeurCmp = CONN_01X02;
+ValeurCmp = JST 2 Pin;
 IdModule  = fca-lib:JST_2Pin;
 EndCmp
 
@@ -124,6 +117,13 @@ TimeStamp = /550DA710;
 Reference = U101;
 ValeurCmp = MCP73834-FCI/UN;
 IdModule  = Housings_SSOP:MSOP-10_3x3mm_Pitch0.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /550DCE37;
+Reference = USB1;
+ValeurCmp = USB-MICRO-B;
+IdModule  = fca-lib:USB_Micro_B;
 EndCmp
 
 EndListe
