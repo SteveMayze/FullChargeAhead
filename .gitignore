@@ -2,4 +2,6 @@
 *.bck
 CurrentSinkOrSwim-cache.lib
 *.kicad_pcb-bak
+.DS_Store
+*.swp
 
