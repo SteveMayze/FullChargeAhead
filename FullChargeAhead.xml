@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/steve/pcbs/FullChargeAhead/FullChargeAhead.sch</source>
-    <date>Tue 31 Mar 2015 20:07:01 CEST</date>
+    <date>Tue 31 Mar 2015 20:37:56 CEST</date>
     <tool>Eeschema 0.201503261001+5536~22~ubuntu14.04.1-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -179,56 +179,22 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="device" part="C">
-      <description>Unpolarized capacitor</description>
-      <footprints>
-        <fp>C?</fp>
-        <fp>C_????_*</fp>
-        <fp>C_????</fp>
-        <fp>SMD*_c</fp>
-        <fp>Capacitor*</fp>
-      </footprints>
+    <libpart lib="FullChargeAheadComponents" part="MCP73834-FCI/UN">
       <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C</field>
+        <field name="Reference">U</field>
+        <field name="Value">MCP73834-FCI/UN</field>
       </fields>
       <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="LED">
-      <footprints>
-        <fp>LED-3MM</fp>
-        <fp>LED-5MM</fp>
-        <fp>LED-10MM</fp>
-        <fp>LED-0603</fp>
-        <fp>LED-0805</fp>
-        <fp>LED-1206</fp>
-        <fp>LEDV</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED</field>
-      </fields>
-      <pins>
-        <pin num="1" name="A" type="passive"/>
-        <pin num="2" name="K" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="R">
-      <description>Resistor</description>
-      <footprints>
-        <fp>R_*</fp>
-        <fp>Resistor_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
+        <pin num="1" name="Vdd" type="power_in"/>
+        <pin num="2" name="Vdd" type="power_in"/>
+        <pin num="3" name="Stat1" type="input"/>
+        <pin num="4" name="Stat2" type="input"/>
+        <pin num="5" name="Vss" type="power_in"/>
+        <pin num="6" name="Program" type="power_in"/>
+        <pin num="7" name="~TE" type="input"/>
+        <pin num="8" name="Therm" type="input"/>
+        <pin num="9" name="Vbatt" type="power_out"/>
+        <pin num="10" name="Vbatt" type="power_out"/>
       </pins>
     </libpart>
     <libpart lib="conn" part="CONN_01X02">
@@ -271,34 +237,68 @@
         <pin num="9" name="SHELL4" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="FullChargeAheadComponents" part="MCP73834-FCI/UN">
+    <libpart lib="device" part="LED">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
       <fields>
-        <field name="Reference">U</field>
-        <field name="Value">MCP73834-FCI/UN</field>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
       </fields>
       <pins>
-        <pin num="1" name="Vdd" type="power_in"/>
-        <pin num="2" name="Vdd" type="power_in"/>
-        <pin num="3" name="Stat1" type="input"/>
-        <pin num="4" name="Stat2" type="input"/>
-        <pin num="5" name="Vss" type="power_in"/>
-        <pin num="6" name="Program" type="power_in"/>
-        <pin num="7" name="~TE" type="input"/>
-        <pin num="8" name="Therm" type="input"/>
-        <pin num="9" name="Vbatt" type="power_out"/>
-        <pin num="10" name="Vbatt" type="power_out"/>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
   </libparts>
   <libraries>
+    <library logical="FullChargeAheadComponents">
+      <uri>/home/steve/pcbs/FullChargeAhead/lib/FullChargeAheadComponents.lib</uri>
+    </library>
     <library logical="device">
       <uri>/usr/local/share/kicad/library/device.lib</uri>
     </library>
     <library logical="conn">
       <uri>/usr/local/share/kicad/library/conn.lib</uri>
-    </library>
-    <library logical="FullChargeAheadComponents">
-      <uri>/home/steve/pcbs/FullChargeAhead/lib/FullChargeAheadComponents.lib</uri>
     </library>
   </libraries>
   <nets>

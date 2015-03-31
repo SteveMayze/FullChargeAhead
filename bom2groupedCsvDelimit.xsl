@@ -48,10 +48,13 @@
 		<xsl:sort select="@ref" />
 		<xsl:text>&nl;</xsl:text>
 		<!-- list of all references -->
+                <xsl:text>&quot;</xsl:text>
 		<xsl:for-each select="key('partTypeByValueAndFootprint', concat(footprint, '-', value))">
 			<xsl:sort select="@ref" />
-			<xsl:value-of select="@ref"/><xsl:text> </xsl:text>
-		</xsl:for-each><xsl:text>,</xsl:text>
+			<xsl:value-of select="@ref"/><xsl:text>, </xsl:text>
+		</xsl:for-each>
+                <xsl:text>&quot;</xsl:text>
+                <xsl:text>,</xsl:text>
 		<!-- quantity of parts with same footprint and value -->
 		<xsl:value-of select="count(key('partTypeByValueAndFootprint', concat(footprint, '-', value)))"/><xsl:text>,</xsl:text>
 		<xsl:value-of select="value"/><xsl:text>,</xsl:text>
