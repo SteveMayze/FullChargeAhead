@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/Users/steve/Documents/PCBs/FullChargeAhead/FullChargeAhead.sch</source>
-    <date>2015 March 31, Tuesday 18:01:05</date>
-    <tool>Eeschema (2015-03-25 BZR 5536)-product</tool>
+    <source>/home/steve/pcbs/FullChargeAhead/FullChargeAhead.sch</source>
+    <date>Tue 31 Mar 2015 20:07:01 CEST</date>
+    <tool>Eeschema 0.201503261001+5536~22~ubuntu14.04.1-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -292,96 +292,96 @@
   </libparts>
   <libraries>
     <library logical="device">
-      <uri>/Library/Application Support/kicad/library/device.lib</uri>
+      <uri>/usr/local/share/kicad/library/device.lib</uri>
     </library>
     <library logical="conn">
-      <uri>/Library/Application Support/kicad/library/conn.lib</uri>
+      <uri>/usr/local/share/kicad/library/conn.lib</uri>
     </library>
     <library logical="FullChargeAheadComponents">
-      <uri>/Users/steve/Documents/PCBs/FullChargeAhead/lib/FullChargeAheadComponents.lib</uri>
+      <uri>/home/steve/pcbs/FullChargeAhead/lib/FullChargeAheadComponents.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(R107-Pad1)">
-      <node ref="USB1" pin="4"/>
-      <node ref="R107" pin="1"/>
-    </net>
-    <net code="2" name="Net-(R108-Pad1)">
+    <net code="1" name="Net-(R108-Pad1)">
       <node ref="R108" pin="1"/>
       <node ref="USB1" pin="3"/>
     </net>
-    <net code="3" name="Net-(R109-Pad1)">
-      <node ref="R109" pin="1"/>
-      <node ref="USB1" pin="2"/>
-    </net>
-    <net code="4" name="GND">
+    <net code="2" name="GND">
       <node ref="R106" pin="1"/>
-      <node ref="C102" pin="2"/>
-      <node ref="U101" pin="5"/>
-      <node ref="C101" pin="2"/>
       <node ref="THERM1" pin="1"/>
-      <node ref="USB1" pin="9"/>
       <node ref="USB1" pin="8"/>
-      <node ref="USB1" pin="7"/>
-      <node ref="USB1" pin="6"/>
-      <node ref="USB1" pin="5"/>
       <node ref="P101" pin="2"/>
+      <node ref="U101" pin="5"/>
+      <node ref="USB1" pin="5"/>
+      <node ref="USB1" pin="6"/>
+      <node ref="USB1" pin="7"/>
       <node ref="P102" pin="2"/>
+      <node ref="USB1" pin="9"/>
+      <node ref="C101" pin="2"/>
+      <node ref="C102" pin="2"/>
+    </net>
+    <net code="3" name="Net-(R109-Pad1)">
+      <node ref="USB1" pin="2"/>
+      <node ref="R109" pin="1"/>
+    </net>
+    <net code="4" name="Net-(R107-Pad1)">
+      <node ref="USB1" pin="4"/>
+      <node ref="R107" pin="1"/>
     </net>
     <net code="5" name="Net-(P101-Pad1)">
-      <node ref="P101" pin="1"/>
       <node ref="R104" pin="1"/>
+      <node ref="P101" pin="1"/>
     </net>
     <net code="6" name="Net-(R106-Pad2)">
-      <node ref="R106" pin="2"/>
       <node ref="U101" pin="6"/>
+      <node ref="R106" pin="2"/>
     </net>
     <net code="7" name="Net-(D103-Pad2)">
       <node ref="R101" pin="1"/>
       <node ref="D103" pin="2"/>
     </net>
     <net code="8" name="Net-(D102-Pad2)">
-      <node ref="D102" pin="2"/>
       <node ref="R102" pin="2"/>
+      <node ref="D102" pin="2"/>
     </net>
     <net code="9" name="Net-(D101-Pad2)">
-      <node ref="D101" pin="2"/>
       <node ref="R103" pin="1"/>
+      <node ref="D101" pin="2"/>
     </net>
-    <net code="10" name="Net-(R101-Pad2)">
-      <node ref="R101" pin="2"/>
-      <node ref="U101" pin="3"/>
-    </net>
-    <net code="11" name="Net-(R102-Pad1)">
-      <node ref="U101" pin="4"/>
-      <node ref="R102" pin="1"/>
-    </net>
-    <net code="12" name="Net-(R103-Pad2)">
-      <node ref="R103" pin="2"/>
-      <node ref="R104" pin="2"/>
-      <node ref="U101" pin="7"/>
-    </net>
-    <net code="13" name="Net-(THERM1-Pad2)">
-      <node ref="U101" pin="8"/>
-      <node ref="THERM1" pin="2"/>
-    </net>
-    <net code="14" name="/Vdd">
-      <node ref="USB1" pin="1"/>
-      <node ref="U101" pin="1"/>
-      <node ref="U101" pin="2"/>
-      <node ref="C101" pin="1"/>
-      <node ref="D101" pin="1"/>
-      <node ref="D102" pin="1"/>
-      <node ref="D103" pin="1"/>
-      <node ref="R108" pin="2"/>
-      <node ref="R107" pin="2"/>
-      <node ref="R109" pin="2"/>
-    </net>
-    <net code="15" name="/Vbat">
+    <net code="10" name="/Vbat">
       <node ref="U101" pin="10"/>
       <node ref="U101" pin="9"/>
       <node ref="C102" pin="1"/>
       <node ref="P102" pin="1"/>
+    </net>
+    <net code="11" name="Net-(THERM1-Pad2)">
+      <node ref="THERM1" pin="2"/>
+      <node ref="U101" pin="8"/>
+    </net>
+    <net code="12" name="Net-(R103-Pad2)">
+      <node ref="U101" pin="7"/>
+      <node ref="R104" pin="2"/>
+      <node ref="R103" pin="2"/>
+    </net>
+    <net code="13" name="Net-(R102-Pad1)">
+      <node ref="U101" pin="4"/>
+      <node ref="R102" pin="1"/>
+    </net>
+    <net code="14" name="Net-(R101-Pad2)">
+      <node ref="R101" pin="2"/>
+      <node ref="U101" pin="3"/>
+    </net>
+    <net code="15" name="/Vdd">
+      <node ref="U101" pin="2"/>
+      <node ref="USB1" pin="1"/>
+      <node ref="R109" pin="2"/>
+      <node ref="U101" pin="1"/>
+      <node ref="R108" pin="2"/>
+      <node ref="R107" pin="2"/>
+      <node ref="C101" pin="1"/>
+      <node ref="D103" pin="1"/>
+      <node ref="D102" pin="1"/>
+      <node ref="D101" pin="1"/>
     </net>
   </nets>
 </export>
