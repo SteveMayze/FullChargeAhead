@@ -1,4 +1,4 @@
-update=Sat 28 Mar 2015 10:50:31 CET
+update=2015 April 26, Sunday 19:38:55
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,5 +58,18 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=lib/FullChargeAheadComponents
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
 [general]
 version=1
