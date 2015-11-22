@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:FullChargeAhead-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -59,7 +59,7 @@ F 5 "1085505 - 62 " H 6900 3350 60  0001 C CNN "ConradPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D101
+L LED-RESCUE-FullChargeAhead D101
 U 1 1 550DA792
 P 4350 3250
 F 0 "D101" H 4350 3350 50  0000 C CNN
@@ -72,7 +72,7 @@ F 5 "N/A" H 4350 3250 60  0001 C CNN "ConradPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D102
+L LED-RESCUE-FullChargeAhead D102
 U 1 1 550DA80B
 P 4800 3250
 F 0 "D102" H 4800 3350 50  0000 C CNN
@@ -85,7 +85,7 @@ F 5 "180102 - 62" H 4800 3250 60  0001 C CNN "ConradPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D103
+L LED-RESCUE-FullChargeAhead D103
 U 1 1 550DA883
 P 5200 3250
 F 0 "D103" H 5200 3350 50  0000 C CNN
